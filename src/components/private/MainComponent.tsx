@@ -2,6 +2,7 @@ import {Image, SafeAreaView, Text, TouchableOpacity, View} from 'react-native';
 
 import {MainScreenProps} from '../../navigations/PrivateNavigationTypes';
 import React from 'react';
+import SettingIcon from '../global/SettingIcon';
 
 const MainComponent = ({navigation, route}: MainScreenProps) => {
   const openDrawerMenuBar = () => {
@@ -14,15 +15,7 @@ const MainComponent = ({navigation, route}: MainScreenProps) => {
 
   return (
     <SafeAreaView>
-      <TouchableOpacity onPress={openDrawerMenuBar}>
-        <Image
-          style={{
-            width: 40,
-            height: 40,
-          }}
-          source={require('../../assets/settings.png')}
-        />
-      </TouchableOpacity>
+      <SettingIcon openDrawerMenuBar={openDrawerMenuBar} />
       <TouchableOpacity onPress={goToTest3}>
         <Text>Main</Text>
       </TouchableOpacity>

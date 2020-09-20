@@ -1,7 +1,7 @@
 import {PublicNavigationParamList} from './PublicNavigationTypes';
 import React from 'react';
-import SignInComponent from '../components/private/SignInComponent';
-import SignUpComponent from '../components/private/SignUpComponent';
+import SignInComponent from '../components/public/SignInComponent';
+import SignUpComponent from '../components/public/SignUpComponent';
 import {createStackNavigator} from '@react-navigation/stack';
 
 const PublicStack = createStackNavigator<PublicNavigationParamList>();
