@@ -36,7 +36,7 @@ const Navigation = () => {
   );
   return (
     <NavigationContainer>
-      {!userReducer.token ? <PrivateNavigation /> : <PublicNavigation />}
+      {userReducer.token ? <PrivateNavigation /> : <PublicNavigation />}
     </NavigationContainer>
   );
 };
