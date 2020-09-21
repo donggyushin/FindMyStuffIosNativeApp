@@ -10,13 +10,12 @@ export type PrivateNavigationParamList = {
   Test2: undefined;
   Test3: undefined;
   Tab: undefined;
-  Stack: undefined;
 };
 
 type MainScreenNavigationProp = CompositeNavigationProp<
-  StackNavigationProp<PrivateNavigationParamList, 'Main'>,
+  BottomTabNavigationProp<PrivateNavigationParamList, 'Main'>,
   CompositeNavigationProp<
-    BottomTabNavigationProp<PrivateNavigationParamList>,
+    StackNavigationProp<PrivateNavigationParamList>,
     DrawerNavigationProp<PrivateNavigationParamList>
   >
 >;
