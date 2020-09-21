@@ -14,21 +14,21 @@ const Stack = createStackNavigator<PrivateNavigationParamList>();
 
 const MainStackNavigation = () => (
   <Stack.Navigator>
-    <Stack.Screen name="Main" component={MainComponent} />
+    <Stack.Screen name="Main" component={TabNavigation} />
     <Stack.Screen name="Test3" component={Test3Component} />
   </Stack.Navigator>
 );
 
 const TabNavigation = () => (
   <Tab.Navigator>
-    <Tab.Screen name="Stack" component={MainStackNavigation} />
+    <Tab.Screen name="Main" component={MainComponent} />
     <Tab.Screen name="Test2" component={Test2Component} />
   </Tab.Navigator>
 );
 
 const PrivateNavigation = () => (
   <Drawer.Navigator>
-    <Drawer.Screen name="Tab" component={TabNavigation} />
+    <Drawer.Screen name="Tab" component={MainStackNavigation} />
     <Drawer.Screen name="Test" component={TestComponent} />
   </Drawer.Navigator>
 );
